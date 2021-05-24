@@ -15,16 +15,14 @@ const Expenses = (props) => {
     <div>
     <Card className="expenses">
     <ExpresesFilter selected={filteredYear} getSelectedYear={handleProcessSelectedYear} />
-    <ExpenseItem
-      title={expense[0].title}
-      amount={expense[0].amount}
-      date={expense[0].date}
+    {expense.map((exp) => 
+      <ExpenseItem
+      title={exp.title}
+      amount={exp.amount}
+      date={exp.date}
     ></ExpenseItem>
-    <ExpenseItem
-      title={expense[1].title}
-      amount={expense[1].amount}
-      date={expense[1].date}
-    ></ExpenseItem>
+    )}
+    
   </Card>
     </div>
   );
