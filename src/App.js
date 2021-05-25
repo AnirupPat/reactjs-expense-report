@@ -9,25 +9,25 @@ let expense = [
   {
     title: "Car Insurance",
     amount: 242.56,
-    date: new Date(2021, 5, 24),
+    date: new Date(2021, 4, 24),
     id:'e1'
   },
   {
     title: "Bike Insurance",
     amount: 142.56,
-    date: new Date(2020, 5, 23),
+    date: new Date(2020, 2, 23),
     id:'e2'
   },
   {
     title: "Magazines",
     amount: 24.0,
-    date: new Date(2022, 5, 22),
+    date: new Date(2022, 0, 22),
     id:'e3'
   },
   {
     title: "Groceries",
     amount: 100.0,
-    date: new Date(2021, 5, 21),
+    date: new Date(2021, 8, 21),
     id:'e4'
   },
 ];
