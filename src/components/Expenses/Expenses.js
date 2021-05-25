@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Expenses.css";
-import ExpenseItem from "./ExpenseItem";
-import ExpresesFilter from "./ExpensesFilter";
+import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from './ExpensesList';
 import Card from "../UI/Card";
 
@@ -25,7 +24,7 @@ const Expenses = (props) => {
   return (
     <div>
       <Card className="expenses">
-        <ExpresesFilter
+        <ExpensesFilter
           selected={filteredYear}
           getSelectedYear={handleProcessSelectedYear}
         />

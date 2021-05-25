@@ -24,3 +24,12 @@
   .new-expense__actions {
     text-align: right;
   }
+
+  .new-expense__action-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 1rem;
+    text-align: right;
+  }

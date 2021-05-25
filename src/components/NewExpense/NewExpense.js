@@ -10,9 +10,12 @@ const NewExpense = (props) => {
         console.log(expenseData);
         props.onAddExpense(expenseData);
     }
+    const handleCardShow = () => {
+        props.cardShow(true);
+    }
     return (
         <div className="new-expense">
-            <ExpenseForm handleSaveExpense={onExpenseSumbit}></ExpenseForm>
+            <ExpenseForm cardShow={handleCardShow} handleSaveExpense={onExpenseSumbit}></ExpenseForm>
         </div>
     )
 }

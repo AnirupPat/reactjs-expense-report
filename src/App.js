@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
+import AddExpenseCard from './components/NewExpense/AddExpenseCard';
 import "./App.css";
+import { act } from 'react-dom/test-utils';
 
 let expense = [
   {
@@ -31,6 +33,7 @@ let expense = [
 ];
 const App = () => {
   const [expenseList, setExpenseList] = useState(expense);
+  const [addCardShow, addCardShowSet] = useState(true);
 
   const handleAddExpense = (newExpense) => {
     console.log('In App!')
@@ -40,9 +43,17 @@ const App = () => {
     });
   }
 
+  const handleCardToggle = action => {
+    console.log("Inside handleCardToggle" +action);
+    addCardShowSet(action);
+  }
+
   return (
     <div>
-      <NewExpense onAddExpense={handleAddExpense}></NewExpense>
+    {addCardShow === true ? <AddExpenseCard cardShow={handleCardToggle} /> : 
+    <NewExpense cardShow={handleCardToggle} onAddExpense={handleAddExpense}></NewExpense>}
+      
+      
       <Expenses expenseData={expenseList}  />
     </div>
   );
